@@ -32,23 +32,23 @@ export default function Donations() {
         <table className="min-w-full bg-white">
           <thead>
             <tr>
-              <th className="text-start py-2 px-4 border-b">Usuário</th>
-              <th className="text-start py-2 px-4 border-b">Material</th>
-              <th className="text-start py-2 px-4 border-b">Quantidade</th>
+              <th className="text-start py-2 px-4 border-b text-black">Usuário</th>
+              <th className="text-start py-2 px-4 border-b text-black">Material</th>
+              <th className="text-start py-2 px-4 border-b text-black">Quantidade</th>
             </tr>
           </thead>
           <tbody>
             {donations.map((donation) => (
               <tr key={donation.id}>
-                <td className="py-2 px-4 border-b">{userMap[donation.userId]}</td>
-                <td className="py-2 px-4 border-b">{donation.title}</td>
-                <td className="py-2 px-4 border-b">{donation.quantity}</td>
+                <td className="py-2 px-4 border-b text-black">{userMap[donation.userId]}</td>
+                <td className="py-2 px-4 border-b text-black">{donation.title}</td>
+                <td className="py-2 px-4 border-b text-black">{donation.quantity}</td>
               </tr>
             ))}
           </tbody>
         </table>
       ) : (
-        <p>Nenhum material foi doado ainda</p>
+        <p className='text-black'>Nenhum material foi doado ainda</p>
       )}
     </div>
   );

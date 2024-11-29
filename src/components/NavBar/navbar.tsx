@@ -18,14 +18,14 @@ export default function NavBar() {
 
   const handleLogout = () => {
     localStorage.removeItem("userName");
-    localStorage.removeItem("userRole");
+    localStorage.removeItem("userRole");  
     localStorage.removeItem("userId");
     window.location.href = "/";
   };
 
   return (
     <header className="flex items-center justify-between bg-liferayGrey px-7 py-3">
-      <Image src="/logoBlue.png" alt="Liferay" width={215} />
+      <Image src="/logoBlue.png" alt="Liferay" width={215} height={200}/>
       <nav className="-ml-[50px] text-black">
         <Link
           href="/home"

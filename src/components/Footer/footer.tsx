@@ -5,7 +5,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from 'react-
 export default function Footer() {
   return (
     <footer className='flex items-center justify-between px-7 py-4 bg-liferayGrey'>
-      <Image src="/logoBlue.png" alt="Liferay" width={215} />
+      <Image src="/logoBlue.png" alt="Liferay" width={215} height={200} />
 
       <span className='text-black'>© 2024 Squad39. Todos os direitos reservados</span>
       <div className='flex gap-3'>

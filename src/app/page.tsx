@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <div className="flex justify-center items-center bg-liferayGrey h-screen w-screen">
       <div className="flex flex-col justify-center items-center py-10 px-16 border rounded-md bg-white gap-7">
-        <Image src="/logoBlue.png" alt="Liferay" width={300} />
+        <Image src="/logoBlue.png" alt="Liferay" width={300} height={200}/>
         <div className="flex flex-col w-full gap-4">
           <input
             type="text"

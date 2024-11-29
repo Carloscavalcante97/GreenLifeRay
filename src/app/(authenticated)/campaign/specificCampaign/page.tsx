@@ -152,23 +152,23 @@ function SpecificCampaign() {
           <table className="min-w-full bg-white">
             <thead>
               <tr>
-                <th className="text-start py-2 px-4 border-b">Usuário</th>
-                <th className="text-start py-2 px-4 border-b">Material</th>
-                <th className="text-start py-2 px-4 border-b">Quantidade</th>
+                <th className="text-start py-2 px-4 border-b text-black">Usuário</th>
+                <th className="text-start py-2 px-4 border-b text-black">Material</th>
+                <th className="text-start py-2 px-4 border-b text-black">Quantidade</th>
               </tr>
             </thead>
             <tbody>
               {donations.map((donation) => (
-                <tr key={donation.id}>
-                  <td className="py-2 px-4 border-b">{userMap[donation.userId]}</td>
-                  <td className="py-2 px-4 border-b">{donation.title}</td>
-                  <td className="py-2 px-4 border-b">{donation.quantity}</td>
+                <tr key={donation.id} >
+                  <td className="py-2 px-4 border-b text-black">{userMap[donation.userId]}</td>
+                  <td className="py-2 px-4 border-b text-black">{donation.title}</td>
+                  <td className="py-2 px-4 border-b text-black">{donation.quantity}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         ) : (
-          <p>Nenhum material foi doado ainda</p>
+          <p className='text-black'>Nenhum material foi doado ainda</p>
         )}
         {isCampaignActive(campaign) && isUserParticipating(campaign, userId) && (
           <button onClick={() => setIsModalDonationOpen(true)} className="self-end bg-liferayGreen text-black px-3 py-2 rounded-md hover:bg-lime-500">Inserir Doação</button>
@@ -177,7 +177,7 @@ function SpecificCampaign() {
       <div className="flex flex-col gap-7">
         <h1 className="text-liferayBlue font-bold text-3xl">Participantes</h1>
         {participants.length > 0 ? (
-          <table className="min-w-full bg-white">
+          <table className="min-w-full bg-white text-black">
             <thead>
               <tr>
                 <th className="py-2 px-4 border-b text-start">Nome</th>
@@ -185,7 +185,7 @@ function SpecificCampaign() {
             </thead>
             <tbody>
               {participants.map((participant) => (
-                <tr key={participant.id}>
+                <tr key={participant.id} >
                   <td className="py-2 px-4 border-b">{participant.name}</td>
                 </tr>
               ))}
